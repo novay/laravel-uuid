@@ -68,6 +68,18 @@ To quickly generate a UUID just do
 ```
 * This will generate a version 1 with a random ganerated MAC address.
 
+To echo out the generated Uuid cast it to a string
+
+```php
+(string) Uuid::generate()
+```
+
+or
+
+```php
+Uuid::generate()->string
+```
+
 ### Advanced Usage
 
 #### UUID creation
@@ -123,6 +135,65 @@ dd($uuid->time);
 $uuid = Uuid::generate(4);
 dd($uuid->version);
 ````
+
+###### Eloquent UUID Generation
+
+If you want an UUID magically be generated in your Laravel models, just add this boot function to your Model.
+
+```php
+/**
+ *  Setup model event hooks
+ */
+public static function boot()
+{
+    parent::boot();
+    self::creating(function ($model) {
+        $model->uuid = (string) Uuid::generate(4);
+    });
+}
+```
+This will generate a version 4 UUID when creating a new record.
+
+###### Model Binding to UUID instead of Primary Key
+
+If  you want to use the UUID in URLs instead of the primary key, you can add this to your model (where 'uuid' is the column name to store the UUID)
+
+```php
+/**
+ * Get the route key for the model.
+ *
+ * @return string
+ */
+public function getRouteKeyName()
+{
+    return 'uuid';
+}
+```
+
+When you inject the model on your resource controller methods you get the correct record
+
+```php
+public function edit(Model $model)
+{
+   return view('someview.edit')->with([
+        'model' => $model,
+    ]);
+}
+```
+
+###### Validation
+
+Just use like any other Laravel validator.
+
+``'uuid-field' => 'uuid'``
+
+Or create a validator from scratch. In the example an Uuid object in validated. You can also validate strings `$uuid->string`, the URN `$uuid->urn` or the binary value `$uuid->bytes`
+
+```php
+$uuid = Uuid::generate();
+$validator = Validator::make(['uuid' => $uuid], ['uuid' => 'uuid']);
+dd($validator->passes());
+```
 
 ### Credits
 * Full development credit must go to [webpatser](https://github.com/webpatser). This package was forked and modified to be compliant with [MIT](https://opensource.org/licenses/MIT) licensing standards for production use.

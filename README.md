@@ -24,7 +24,11 @@ Laravel package to generate a UUID according to the RFC 4122 standard. UUID Vers
     - [Import UUID](#import-uuid)
     - [Extract time](#extract-time)
     - [Extract Version](#extract-version)
+    - [Eloquent UUID Generation](#eloquent-uuid-generation)
+    - [Model Binding to UUID instead of Primary Key](#model-binding-to-uuid-instead-of-primary-key)
+    - [Validation](#validation)
 - [License](#license)
+- [Notes](#notes)
 - [Credits](#credits)
 
 ### About
@@ -197,6 +201,9 @@ dd($validator->passes());
 
 ### Credits
 * Full development credit must go to [webpatser](https://github.com/webpatser). This package was forked and modified to be compliant with [MIT](https://opensource.org/licenses/MIT) licensing standards for production use.
+
+## Notes
+Full details on the UUID specification can be found [here](http://tools.ietf.org/html/rfc4122)
 
 ## License
 Laravel UUID is licensed under the MIT license for both personal and commercial products. Enjoy!

@@ -1,10 +1,10 @@
 # Laravel UUID (Universally Unique Identifier)
 
-[![Total Downloads](https://poser.pugx.org/novay/uuid/d/total.svg)](https://packagist.org/packages/novay/uuid)
+[![Total Downloads](https://poser.pugx.org/novay/laravel-uuid/d/total.svg)](https://packagist.org/packages/novay/laravel-uuid)
 [![Build Status](https://travis-ci.org/novay/laravel-uuid.svg?branch=master)](http://travis-ci.org/novay/laravel-uuid)
-[![Latest Stable Version](https://poser.pugx.org/novay/uuid/v/stable.svg)](https://packagist.org/packages/novay/uuid)
-[![Latest Unstable Version](https://poser.pugx.org/novay/uuid/v/unstable.svg)](https://packagist.org/packages/novay/uuid)
-[![License](https://poser.pugx.org/novay/uuid/license.svg)](https://raw.githubusercontent.com/novay/laravel-auth/LICENSE)
+[![Latest Stable Version](https://poser.pugx.org/novay/laravel-uuid/v/stable.svg)](https://packagist.org/packages/novay/laravel-uuid)
+[![Latest Unstable Version](https://poser.pugx.org/novay/laravel-uuid/v/unstable.svg)](https://packagist.org/packages/novay/laravel-uuid)
+[![License](https://poser.pugx.org/novay/laravel-uuid/license.svg)](https://raw.githubusercontent.com/novay/laravel-auth/LICENSE)
 
 Laravel package to generate a UUID according to the RFC 4122 standard. UUID Versions 1, 3, 4 and 5 are supported. With MIT license.
 

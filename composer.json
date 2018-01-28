@@ -7,6 +7,10 @@
             "email" : "christoph@downsized.nl"
         },
         {
+            "name" : "Jeremy Kenedy",
+            "email" : "jeremykenedy@gmail.com"
+        },
+        {
             "name": "Noviyanto Rahmadi",
             "email": "novay@enterwind.com"
         }
@@ -31,9 +35,6 @@
     "support" : {
         "source" : "https://github.com/novay/laravel-uuid",
         "issues" : "https://github.com/novay/laravel-uuid/issues"
-    },
-    "suggest" : {
-        "paragonie/random_compat": "A random_bytes Php 5.x polyfill."
     },
    "extra": {
         "laravel": {

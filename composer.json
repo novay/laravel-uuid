@@ -41,5 +41,6 @@
                 "Uuid": "Novay\\Uuid\\UuidFacade"
             }
         }
-    }
+    },
+    "minimum-stability": "stable"
 }

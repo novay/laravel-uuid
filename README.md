@@ -22,8 +22,6 @@ Laravel package to generate a UUID according to the RFC 4122 standard. UUID Vers
     - [Import UUID](#import-uuid)
     - [Extract time](#extract-time)
     - [Extract Version](#extract-version)
-- [Changelog](#changelog)
-    - [2.*](#2.*)
 - [License](#license)
 - [Credits](#credits)
 
@@ -113,12 +111,6 @@ dd($uuid->time);
 $uuid = Uuid::generate(4);
 dd($uuid->version);
 ````
-
-### Changelog
-##### 2.*
-* Laravel Uuid is now fully PSR-2, just like Laravel 5.1.
-* Not that much has changed except for UPPERCASING the constants used in Laravel Uuid.
-* Meaning `Uuid::nsDNS` is now `Uuid::NS_DNS` etc. Should be an easy fix.
 
 ### Credits
 * Full development credit must go to [webpatser](https://github.com/webpatser). This package was forked and modified to be compliant with [MIT](https://opensource.org/licenses/MIT) licencing standards for production use.

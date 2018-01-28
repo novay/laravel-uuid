@@ -1,7 +1,7 @@
 # Laravel UUID (Universally Unique Identifier)
 
 [![Total Downloads](https://poser.pugx.org/novay/uuid/d/total.svg)](https://packagist.org/packages/novay/uuid)
-[![Build Status](https://secure.travis-ci.org/novay/uuid.png?branch=master)](http://travis-ci.org/novay/laravel-uuid)
+[![Build Status](https://travis-ci.org/novay/laravel-uuid.svg?branch=master)](http://travis-ci.org/novay/laravel-uuid)
 [![Latest Stable Version](https://poser.pugx.org/novay/uuid/v/stable.svg)](https://packagist.org/packages/novay/uuid)
 [![Latest Unstable Version](https://poser.pugx.org/novay/uuid/v/unstable.svg)](https://packagist.org/packages/novay/uuid)
 [![License](https://poser.pugx.org/novay/uuid/license.svg)](https://raw.githubusercontent.com/novay/laravel-auth/LICENSE)
@@ -11,6 +11,8 @@ Laravel package to generate a UUID according to the RFC 4122 standard. UUID Vers
 - [About](#about)
 - [Requirements](#requirements)
 - [Installation](#installation)
+    - [Laravel 5.5 and above](#laravel-5.5-and-above)
+    - [Laravel 5.4 and below](#laravel-5.4-and-below)
 - [Basic Usage](#basic-usage)
 - [Advanced Usage](#advanced-usage)
     - [UUID creation](#uuid-creation)
@@ -29,21 +31,31 @@ Laravel package to generate a UUID according to the RFC 4122 standard. UUID Vers
 Since Laravel `4.*` and `5.*` both rely on either `OpenSSL` or `Mcrypt`, the pseudo random byte generator now tries to use one of them. If both cannot be used (not a Laravel project?), the 'less random' `mt_rand()` function is used.
 
 ### Requirements
-* [Laravel 5.3, 5.4 or newer](https://laravel.com/docs/installation)
+* [Laravel 5.3, 5.4 or 5.5+](https://laravel.com/docs/installation)
 
 ### Installation
 
+##### Laravel 5.5 and above
 1. From your projects root folder in terminal run:
 
 ```bash
-    composer require novay/uuid
+    composer require novay/laravel-uuid
+```
+
+* Uses package auto discovery feature, no need to edit the `config/app.php` file.
+
+##### Laravel 5.4 and below
+1. From your projects root folder in terminal run:
+
+```bash
+    composer require novay/laravel-uuid:2.0
 ```
 
 2. Register the package with laravel in `config/app.php` under `aliases` with the following:
 
 ```php
     'aliases' => [
-        'Uuid' => Novay\Uuid\Uuid::class,
+        'Uuid' => novay\Uuid\Uuid::class,
     ];
 ```
 
@@ -113,7 +125,7 @@ dd($uuid->version);
 ````
 
 ### Credits
-* Full development credit must go to [webpatser](https://github.com/webpatser). This package was forked and modified to be compliant with [MIT](https://opensource.org/licenses/MIT) licencing standards for production use.
+* Full development credit must go to [webpatser](https://github.com/webpatser). This package was forked and modified to be compliant with [MIT](https://opensource.org/licenses/MIT) licensing standards for production use.
 
 ## License
 Laravel UUID is licensed under the MIT license for both personal and commercial products. Enjoy!

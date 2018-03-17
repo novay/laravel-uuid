@@ -59,7 +59,7 @@ Since Laravel `4.*` and `5.*` both rely on either `OpenSSL` or `Mcrypt`, the pse
 
 ```php
     'aliases' => [
-        'Uuid' => novay\Uuid\Uuid::class,
+        'Uuid' => Novay\Uuid\Uuid::class,
     ];
 ```
 
